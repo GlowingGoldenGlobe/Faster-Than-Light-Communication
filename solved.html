@@ -25,13 +25,66 @@ body {
   background-color: transparent;
   color: black;
   font-family: Times New Roman;
-  width: 100%;
+  width: 98%;
   height: 100%;
   margin: 0 auto;
-  border: 0px solid transparent;
+  border: 0px solid black;
   outline: 0px solid transparent;
-  margin: 1% 1% 1% 1%;
+  padding: 1% 1% 1% 1%;
+  padding-right: 1%;
   z-index: 1;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.class_pop_up {
+  background-color: white;
+  color: grey;
+  font-family: Times New Roman;
+  font-weight: bold;
+  width: 90%;
+  height: 25%;
+  margin: 0 auto;
+  border: 2px outset darkblue;
+  outline: 0px solid transparent;
+  padding: 2% 2% 2% 2%;
+  z-index: 1;
+  box-shadow: 2px 2px 4px 4px black;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+button {
+  background-color: grey;
+  color: white;
+  border: 4px outset grey;
+  cursor: pointer;
+}
+#b_1:hover {
+  background-color: lightgrey;
+  color: black;
+  border: 4px outset black;
+  cursor: pointer;
+}
+.button_2 {
+  width: auto;
+  height: auto;
+  padding: 20px 20px 20px 20px;
+}
+.button_2:active {
+  background-color: lightgrey;
+  color: black;
+  border: 4px outset black;
+  cursor: pointer;
+}
+.hidden_element {
+  display: none;
+}
+p {
+  width: 100%;
+  border: 0px solid black;
+}
+ul {
+  width: 98%;
 }
 </style>
 <body>
@@ -41,10 +94,18 @@ body {
 <h1>Faster than Light Communication:  Quantum Entanglement</h1>
 <p>
 Published to the web:  September 17, 2022
-Invented:  September 16, 2022;  approximately 4AM CST, USA.
-Inventor:  Richard Isaac Craddock
-Location:  <button onclick="alert(\"Richard Craddock\n207 Hillcrest Rd Apt 133\nMobile, Alabama  36608, USA,\n Earth, Milky Way, Quadrant 1, Universe 1, Creation, God\")" >Mobile, Alabama, USA</button>
-</p>
+<br>Invented:  September 16, 2022;  approximately 4AM CST, USA.
+<br>Inventor:  Richard Isaac Craddock
+<br>Location:  <button id="b_1" onclick="display_pop_up_1()" >Mobile, Alabama, USA</button>
+<div id="pop_up_1" class="class_pop_up hidden_element" >
+    <p>
+<br>Richard Craddock
+<br>207 Hillcrest Rd Apt 133
+<br>Mobile, Alabama  36608, USA
+<br>Earth, Milky Way, Quadrant 1, Universe 1, Creation, God    
+    </p>
+    <button class="button_2" onclick="close_pop_up_1()" >Close</button>
+</div>
 
 
 
@@ -56,9 +117,9 @@ Location:  <button onclick="alert(\"Richard Craddock\n207 Hillcrest Rd Apt 133\n
 <ul><li>Standard of Duration of Observation-Measurement:  50 miliseconds</li></ul>
 <p>Point B</p>
 <ul><li>Standard of Duration of Observation-Measurement:  200 miliseconds</li></ul>
-<p>Four Parts of 50s is 200.
-i.e.,  ==>  50 MS * 4 = 200 MS.
-It takes four events of observations each at a duration of 50 miliseconds to elapse the duration of the observation at Point B of 200 miliseconds.
+<p>
+Four Parts of 50s is 200 (i.e., 50 MS * 4 = 200 MS;  at Point A, where there is a set of 4 consecutive observerations, each 50 MS in duration, then the total is 200 MS (the duration of the observation at Point B).
+<br>It takes four events of observations each at a duration of 50 miliseconds to elapse the duration of the observation at Point B of 200 miliseconds.
 </p>
 
 <h3>Standard Set Duration</h3>
@@ -123,5 +184,15 @@ The term, single-code-message-character is used in this document to differentiat
 <div id="id_bottom" >
 <p>Bottom of this Document</p>
 </div>
+<script>
+function display_pop_up_1() {
+    var_1 = document.getElementById("pop_up_1");
+    var_1.style.display = "block";
+}
+function close_pop_up_1() {
+    el_1 = document.getElementById("pop_up_1");
+    el_1.style.display = "none";
+}
+</script>
 </body>
 </html>
