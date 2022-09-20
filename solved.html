@@ -44,16 +44,16 @@ body {
   font-family: Times New Roman;
   font-weight: bold;
   width: 90%;
-  height: 25%;
-  margin: 0 auto;
+  height: 80%;
+  margin: 0px 0px 0px 0px;
   border: 2px outset darkblue;
   outline: 0px solid transparent;
   padding: 2% 2% 2% 2%;
   z-index: 1;
   box-shadow: 2px 2px 4px 4px black;
   position: absolute;
-  top: 25%;
-  left: 5%;
+  top: 5%;
+  left: 2%;
 }
 button {
   background-color: grey;
@@ -104,9 +104,11 @@ ul {
 .class_a_1 {
   text-decoration: none;
 }
-.class_a_2 {
+.class_a_2, .class_a_3 {
   background-color: grey;
   color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
   border: 0px outset black;
   padding: 4px 4px 4px 4px;
   box-shadow: 2px 2px 2px 2px black;
@@ -121,17 +123,36 @@ ul {
   box-shadow: 2px 2px 2px 2px blue;
   text-decoration: none;
   cursor: pointer;
+  opacity: 1;
 }
-
-
+#t_container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  border: 0px solid black;
+}
+#t_1, #t_2 {
+  display: inline-block;
+  width: 49.7%;
+  border: 0px solid red;
+  outline: 0px solid transparent;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+#t_1 {
+  text-align: left;
+}
+#t_2 {
+  text-align: right;
+}
 </style>
 <body>
 <div id="id_document_1" class="class_doc_1" >
 
-
 <h1>Faster than Light Communication:  Quantum Entanglement</h1>
-<div>
-<a href="https://glowinggoldenglobe.com/glowing-golden-globe-3-1" target="_top" class="class_a_2" >Contact</a>
+<div id="t_container" >
+<div id="t_1" ><a href="https://glowinggoldenglobe.com/glowing-golden-globe-3-1" target="_top" class="class_a_2" >Contact</a></div>
+<div id="t_2" ><button id="id_b_1" class="class_a_2 class_a_3" style="opacity: 1;" onclick="display_pop_up_1()" >Author</button></div>
 </div>
 <div>
 <p>
@@ -148,6 +169,8 @@ Document text edit, updated:  September 19, 2022 &nbsp;<a href="https://glowingg
 <br>Earth, Milky Way, Quadrant 1, Universe 1, Creation, God    
     </p>
     <button class="button_2" onclick="close_pop_up_1()" >Close</button>
+    <a href="https://glowinggoldenglobe.com" class="button_2"  >Glowing Golden Globe .com</a>
+    <a href="https://glowinggoldenglobe.github.io/page/" class="button_2"  >Glowing Golden Globe .github</a>
 </div>
 </div>
 
@@ -244,11 +267,52 @@ The term, single-code-message-character is used in this document to differentiat
 function display_pop_up_1() {
     var_1 = document.getElementById("pop_up_1");
     var_1.style.display = "block";
+    var_2 = document.getElementById("id_b_1");
+    var_2.style.opacity = "1";
 }
 function close_pop_up_1() {
     el_1 = document.getElementById("pop_up_1");
     el_1.style.display = "none";
+    animation_1(0);
 }
+function onload_div_sizes() {
+//deprecated
+    el_parent = document.getElementById("t_container");
+    width_parent = el_parent.clientWidth;
+    num_width_parent = Number(width_parent);
+    half = (num_width_parent/2);
+    half_less_some = half - 2;
+    half_px = half_less_some + "px";
+    el_1 = document.getElementById("t_1");
+    el_2 = document.getElementById("t_2");
+    el_1.style.width = half_px;
+    el_2.style.width = half_px;
+    alert("True " + el_1.style.width  + " " + el_2.style.width);
+    return null;
+}
+//onload_div_sizes();
+function animation_1(param) {
+    n = Number(param);
+    if(n == 0) {n = 1;}
+    el_1 = document.getElementById("id_b_1");
+    o = el_1.style.opacity;
+    n_2 = Number(o);
+    new_o = (n_2 - .01);
+    if (n_2 <= 0) {return null;}else{
+        el_1.style.opacity = new_o;
+    }
+    if (new_o <= 0.1) {return null;}else{
+        arg = n;
+        r_a_1(arg);
+    }
+    return null;
+}
+function r_a_1(param) {
+    n = Number(param);
+    setTimeout(function() {animation_1(n);}, 25);
+    return null;
+}
+animation_1(0);
 </script>
 </body>
 </html>
