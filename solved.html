@@ -8,7 +8,8 @@
 body {
   background-color: transparent;
   color: black;
-  font-family: Times New Roman;
+  font-family: "Times New Roman", Times, serif;
+  font-size: medium;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -24,7 +25,7 @@ body {
 .class_doc_1 {
   background-color: transparent;
   color: black;
-  font-family: Times New Roman;
+  font-family: "Times New Roman", Times, serif;
   font-size: 18px;
   width: 98%;
   height: 100%;
@@ -85,7 +86,20 @@ p {
   border: 0px solid black;
 }
 ul {
-  width: 97%;
+  width: 98%;
+}
+@media only screen and (max-width: 1300px) {
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+  p {
+    font-size: 150%; /* ALSO, below, change <ul> {} font-size to the same font-size as <p> {} css, here. */
+  }
+  ul {
+    width: 96%;
+    margin-right: 2%;
+    font-size: 150%;
+  }
 }
 .class_a_1 {
   text-decoration: none;
@@ -125,7 +139,7 @@ On the web date:  September 17, 2022
 <br>
 Document creation date:  September 17, 2022 &nbsp;<a href="https://glowinggoldenglobe.github.io/Faster-Than-Light-Communication/original_text.pdf" target="_top" class="class_a_1" >original_text_pdf</a>
 <br>
-Document text edit, updated:  September 19, 2022
+Document text edit, updated:  September 19, 2022 &nbsp;<a href="https://glowinggoldenglobe.github.io/Faster-Than-Light-Communication/Faster_Than_Light_Data_Transfer.pdf" target="_top" class="class_a_1" >this_web_page_pdf</a>
 <div id="pop_up_1" class="class_pop_up hidden_element" >
     <p>
 <br>Richard Craddock
